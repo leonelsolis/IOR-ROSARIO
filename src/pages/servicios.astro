@@ -1,0 +1,23 @@
+---
+import BaseLayout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<BaseLayout title="Servicios - Instituto Oncológico">
+  <Header slot="header" />
+
+  <h1>Servicios Oncológicos</h1>
+
+  <p>Brindamos atención integral y personalizada en:</p>
+
+  <ul>
+    <li>Consultas de oncología clínica</li>
+    <li>Radioterapia y quimioterapia</li>
+    <li>Laboratorio especializado</li>
+    <li>Diagnóstico por imágenes</li>
+    <li>Evaluaciones preventivas</li>
+  </ul>
+
+  <Footer slot="footer" />
+</BaseLayout>

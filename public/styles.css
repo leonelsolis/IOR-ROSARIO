@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.header, .footer {
+  background: #0059af;
+  color: white;
+  padding: 1rem;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.hero {
+  padding: 4rem 2rem;
+  background: #eaf3ff;
+  text-align: center;
+}
+
+.btn {
+  padding: 0.8rem 1.4rem;
+  background: #0059af;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+}
