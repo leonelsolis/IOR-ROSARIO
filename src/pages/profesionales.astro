@@ -1,0 +1,238 @@
+---
+import BaseLayout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<style>
+  .hero {
+    background: #f7f7fb;
+    padding: 4.5rem 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #2c2c2c;
+  }
+
+  .hero p {
+    color: #666;
+    font-size: 1.05rem;
+  }
+
+  .team {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem 4rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+  }
+
+  .card {
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  }
+
+  .card-image {
+    width: 100%;
+    height: 280px;
+    background: #e8e8e8;
+    overflow: hidden;
+  }
+
+  .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .card h3 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.15rem;
+    color: #2c2c2c;
+    font-weight: 600;
+  }
+
+  .specialty {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+
+  .description {
+    color: #888;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+  }
+
+  .btn-turno {
+    display: inline-block;
+    background: #3a3a3a;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: background 0.2s ease;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .btn-turno:hover {
+    background: #2c2c2c;
+  }
+  .card-content .btn-turno {
+  margin-top: auto; 
+}
+  @media (max-width: 768px) {
+    .team {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      padding: 0 1rem 2rem 1rem;
+    }
+
+    .card-image {
+      height: 220px;
+    }
+
+    .card-content {
+      padding: 1rem;
+    }
+  }
+</style>
+
+<BaseLayout title="Profesionales - Instituto Oncológico">
+  <Header slot="header" />
+
+  <section class="hero">
+    <h1>Conoce nuestro equipo</h1>
+    <p>Un equipo a tu servicio. En IOR podés consultar a diversos especialistas.</p>
+  </section>
+
+  <section class="team">
+    <div class="card">
+      <div class="card-image">
+        <img src="https://via.placeholder.com/220x280?text=Dra.+Agostinis" alt="Dra. Agostinis Florencia" />
+      </div>
+      <div class="card-content">
+        <h3>Dra. Agostinis Florencia</h3>
+        <div class="specialty">Ortopedia Oncológica</div>
+        <div class="description">Sarcoma</div>
+        <a href="https://turnos.hnader.com.ar/oncologia" target="_blank" class="btn-turno">Solicitar turno</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-image">
+        <img src="https://via.placeholder.com/220x280?text=Dr.+Alonso" alt="Dr. Alonso Carlos" />
+      </div>
+      <div class="card-content">
+        <h3>Dr. Alonso Carlos</h3>
+        <div class="specialty">Dermatología Oncológica</div>
+        <div class="description">Melanoma y lesiones en piel</div>
+        <a href="https://turnos.hnader.com.ar/oncologia" target="_blank" class="btn-turno">Solicitar turno</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-image">
+        <img src="https://via.placeholder.com/220x280?text=Dr.+Fein" alt="Dr. Fein Luis" />
+      </div>
+      <div class="card-content">
+        <h3>Dr. Fein Luis</h3>
+        <div class="specialty">Oncología Clínica</div>
+        <div class="description"></div>
+        <a href="https://turnos.hnader.com.ar/oncologia" target="_blank" class="btn-turno">Solicitar turno</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-image">
+        <img src="https://via.placeholder.com/220x280?text=Lic.+Gonzalez" alt="Lic. González Rocio" />
+      </div>
+      <div class="card-content">
+        <h3>Lic. González Rocio</h3>
+        <div class="specialty">Kinesiología</div>
+        <div class="description"></div>
+        <a href="https://turnos.hnader.com.ar/oncologia" target="_blank" class="btn-turno">Solicitar turno</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-image">
+        <img src="https://via.placeholder.com/220x280?text=Dra.+Gonsweiler" alt="Dra. Gonsweiler Georgina" />
+      </div>
+      <div class="card-content">
+        <h3>Dra. Gonsweiler Georgina</h3>
+        <div class="specialty">Oncología Clínica</div>
+        <div class="description">Sarcoma</div>
+        <a href="https://turnos.hnader.com.ar/oncologia" target="_blank" class="btn-turno">Solicitar turno</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-image">
+        <img src="https://via.placeholder.com/220x280?text=Dr.+Jurado" alt="Dr. Jurado Ramiro" />
+      </div>
+      <div class="card-content">
+        <h3>Dr. Jurado Ramiro</h3>
+        <div class="specialty">Oncología Clínica</div>
+        <div class="description">Melanoma y tumores de piel</div>
+        <a href="https://turnos.hnader.com.ar/oncologia" target="_blank" class="btn-turno">Solicitar turno</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-image">
+        <img src="https://via.placeholder.com/220x280?text=Dr.+Lucchesi" alt="Dr. Lucchesi Lucas" />
+      </div>
+      <div class="card-content">
+        <h3>Dr. Lucchesi Lucas</h3>
+        <div class="specialty">Oncología Clínica</div>
+        <div class="description">Cáncer de pulmón y tumores de cabeza y cuello</div>
+        <a href="https://turnos.hnader.com.ar/oncologia" target="_blank" class="btn-turno">Solicitar turno</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-image">
+        <img src="https://via.placeholder.com/220x280?text=Dr.+Mainardi" alt="Dr. Mainardi Nicolás" />
+      </div>
+      <div class="card-content">
+        <h3>Dr. Mainardi Nicolás</h3>
+        <div class="specialty">Oncología Clínica</div>
+        <div class="description">Tumores Urogenitales</div>
+        <a href="https://turnos.hnader.com.ar/oncologia" target="_blank" class="btn-turno">Solicitar turno</a>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

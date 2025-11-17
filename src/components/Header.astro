@@ -1,7 +1,7 @@
 <style>
   header {
     background: white;
-    padding: 1rem 0;
+    padding: 1.25rem 0;
     color: black;
     border-bottom: 1px solid;
     border-image: linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0.1)) 1;
@@ -19,7 +19,7 @@
   }
 
   .brand {
-    width: 140px;
+    width: 220px;
     text-decoration: none;
     color: black;
     display: inline-block;
@@ -28,7 +28,7 @@
   /* Desktop menu */
   ul {
     display: flex;
-    gap: 1.5rem;
+    gap: 1.8rem;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -130,6 +130,22 @@
     /* Make the Turnos button look good in the full-width bar */
     .nav-toggle:checked ~ ul li .btn-turnos { background: #111; color: #fff; border-color: #111; padding: 0.6rem 1.1rem; }
   }
+
+  /* Desktop layout: logo left, links centered, turnos button right */
+  @media (min-width: 769px) {
+    nav { align-items: center; }
+
+    /* let the list take remaining space and center its items */
+    ul { flex: 1; justify-content: center; }
+
+    /* make sure the turnos button sits at the far right of the nav */
+    ul li:last-child { position: absolute; right: 1.25rem; top: 50%; transform: translateY(-50%); }
+
+    /* slightly larger clickable size for desktop */
+    ul li a { font-size: 1.05rem; }
+
+    .btn-turnos { padding: 0.6rem 1.1rem; }
+  }
 </style>
 
 <header>
@@ -144,7 +160,9 @@
 
     <ul>
       <li><a href="/">Inicio</a></li>
+      <li><a href="/profesionales">Profesionales</a></li>
       <li><a href="/servicios">Servicios</a></li>
+      <li><a href="/investigacion">Investigacion</a></li>
       <li><a href="/contacto">Contacto</a></li>
       <li><a href="https://turnos.hnader.com.ar/oncologia" target="_blank" class="btn-turnos">Turnos online</a></li>
     </ul>

@@ -1,0 +1,63 @@
+---
+import BaseLayout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<style>
+  .hero {
+    background: #fefcf8;
+    padding: 4.5rem 2rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .projects {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  .project {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  }
+</style>
+
+<BaseLayout title="Investigación - Instituto Oncológico">
+  <Header slot="header" />
+
+  <section class="hero">
+    <h1>Investigación y Proyectos</h1>
+    <p>Trabajamos en estudios clínicos y proyectos orientados a mejorar el diagnóstico y tratamiento.</p>
+  </section>
+
+  <section class="content">
+    <div class="projects">
+      <div class="project">
+        <h3>Estudio A: Detección temprana</h3>
+        <p>Proyecto piloto para evaluar técnicas de imagen avanzadas en estadios tempranos.</p>
+      </div>
+
+      <div class="project">
+        <h3>Estudio B: Ensayo clínico</h3>
+        <p>Ensayo controlado para comparar protocolos de tratamiento adyuvante.</p>
+      </div>
+
+      <div class="project">
+        <h3>Publicaciones</h3>
+        <p>Listado de publicaciones y reuniones científicas (boceto).</p>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>
